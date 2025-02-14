@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlappyBird</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/flappybird.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="popup-leadeboard">
+                <img src="assets/banner.png" class="banner" alt="">
+                <div class="title-banner">LEADEBOARD</div>
+                <div class="col-content">
+                   
+                  
+                </div>
+                <button class="btn-close">BACK</button>
+            </div>
+            <div class="popup-timerScreen">
+                <div class="title" id="timer">3</div>
+            </div>
+            <div class="popup-pause">
+                <div class="title">GAME PAUSE</div>
+                <div class="col-btn" id="col-btn-gameOver">
+                    <img draggable="false" width="100" class="btn-start-pause" src="assets/startImg.png" alt="">
+                    <img draggable="false" width="100" class="btn-leadeboard-pause" src="assets/leadeboardImg.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="popup-gameOver">
+                <div class="title">GAME OVER</div>
+                <div class="col-data">
+                    <div class="username-gameOver">Bintang</div>
+                    <div class="score-gameOver">00</div>
+
+                </div>
+                <div class="col-btn" id="col-btn-gameOver">
+                    <img draggable="false" width="100" class="btn-start-gameOver" src="assets/startImg.png" alt="">
+                    <img draggable="false" width="100" class="btn-leadeboard-gameOver" src="assets/leadeboardImg.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="popup-screen">
+                <div class="title">FlappyBird</div>
+                <img draggable="false" class="f-gif" src="assets/flappybird.gif" alt="">
+                <div class="box-t-gif">
+                    <img draggable="false" class="t-gif" src="assets/toppipe.png" alt="">
+
+                </div>
+                <div class="box-b-gif">
+                    <img draggable="false" class="b-gif" src="assets/bottompipe.png" alt="">
+
+                </div>
+                <div class="box-t-gif2">
+                    <img draggable="false" class="t-gif" src="assets/toppipe.png" alt="">
+
+                </div>
+                <div class="box-b-gif2">
+                    <img draggable="false" class="b-gif" src="assets/bottompipe.png" alt="">
+
+                </div>
+                <div class="box-t-gif3">
+                    <img draggable="false" class="t-gif" src="assets/toppipe.png" alt="">
+
+                </div>
+                <div class="box-b-gif3">
+                    <img draggable="false" class="b-gif" src="assets/bottompipe.png" alt="">
+
+                </div>
+                <input type="text" class="input-username" placeholder="Input username">
+                <div class="col-btn">
+                    <img draggable="false" width="100" class="btn-start" src="assets/startImg.png" alt="">
+                    <img draggable="false" width="100" class="btn-leadeboard" src="assets/leadeboardImg.png" alt="">
+                </div>
+                <div class="box-sound">
+                    <img src="assets/sound.png" class="soundImg" width="50" alt="">
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="score-game">1</div>
+            <img src="assets/pauseIcon.png" class="pauseIcon" width="50" alt="">
+            <canvas></canvas>
+        </div>
+    </div>
+    <audio src="assets/bgm_mario.mp3" class="sound-utama" loop></audio>
+    <audio src="assets/sfx_die.wav" class="sound-die"></audio>
+    <audio src="assets/sfx_point.wav" class="sound-point"></audio>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

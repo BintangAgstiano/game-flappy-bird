@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2p";
+    scrollbar-width: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    width: 400px;
+    height: 700px;
+    background-image: url('assets/flappybirdbg.png');
+    background-size: cover;
+}
+
+.score-game {
+    position: absolute;
+    top: 50px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.popup-screen {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: url('assets/flappybirdbg.png');
+    background-size: cover;
+    top: 0;
+    flex-direction: column;
+    z-index: 99;
+    gap: 30px;
+    /* display: none; */
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 3px 2px rgb(58, 53, 52);
+    margin-top: 10px;
+}
+
+.input-username {
+    padding: 10px 15px;
+    margin-top: 300px;
+}
+
+.col-btn {
+    display: flex;
+    gap: 30px;
+}
+
+.btn-leadeboard {
+    cursor: pointer;
+}
+
+.btn-start {
+    cursor: pointer;
+}
+
+.box-sound {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.line {
+    position: absolute;
+    width: 3px;
+    height: 50px;
+    rotate: 45deg;
+    background-color: #dfdfdf;
+}
+
+.box-sound img {
+    cursor: pointer;
+}
+
+.f-gif {
+    width: 50px;
+    position: absolute;
+    top: 285px;
+    /* animation: animationGif 10s infinite; */
+}
+
+.box-t-gif {
+    width: 50px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: 230px;
+    right: -50px;
+    animation: animationGif 10s linear infinite;
+}
+
+.box-t-gif3 {
+    width: 50px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: 230px;
+    right: -50px;
+    animation: animationGif 10s linear infinite 4s;
+}
+
+.box-t-gif2 {
+    width: 50px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: 230px;
+    right: -50px;
+    animation: animationGif 10s linear infinite 2s;
+}
+
+.t-gif {
+    width: 30px;
+    margin-top: -200px;
+    /* animation: animationGif 10s infinite; */
+}
+
+.box-b-gif {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 340px;
+    right: -50px;
+    animation: animationGif 10s linear infinite;
+}
+
+.box-b-gif2 {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 340px;
+    right: -50px;
+    animation: animationGif 10s linear infinite 2s;
+}
+
+.box-b-gif3 {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 340px;
+    right: -50px;
+    animation: animationGif 10s linear infinite 4s;
+}
+
+.b-gif {
+    width: 30px;
+
+    /* animation: animationGif 10s infinite; */
+}
+
+@keyframes animationGif {
+    0% {
+        right: -250px;
+    }
+
+    100% {
+        right: 450px;
+    }
+}
+
+.popup-gameOver {
+    width: 400px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: url('assets/flappybirdbg.png');
+    background-size: cover;
+    top: 0;
+    flex-direction: column;
+    z-index: 99;
+    display: none;
+}
+
+.col-data {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: white;
+    align-items: center;
+}
+
+#col-btn-gameOver {
+    margin-top: 130px;
+}
+
+.btn-leadeboard-gameOver {
+    cursor: pointer;
+}
+
+.btn-start-gameOver {
+    cursor: pointer;
+}
+
+.pauseIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.popup-pause {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: url('assets/flappybirdbg.png');
+    background-size: cover;
+    top: 0;
+    flex-direction: column;
+    z-index: 99;
+    /* display: flex; */
+    display: none;
+}
+
+.btn-leadeboard-pause {
+    cursor: pointer;
+}
+
+.btn-start-pause {
+    cursor: pointer;
+}
+
+.popup-timerScreen {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    z-index: 999;
+    /* display: flex; */
+    display: none;
+}
+
+.popup-leadeboard {
+    width: 300px;
+    height: 500px;
+    background-color: #FEDBA3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    z-index: 999;
+    border: 5px solid #E6AE75;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px #C95939;
+    padding: 30px;
+    display: none;
+}
+
+.banner {
+    position: absolute;
+    top: -60px;
+    height: 100px;
+}
+
+.title-banner {
+    position: absolute;
+    top: -30px;
+    color: #C95939;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.box-content {
+    width: 100%;
+    height: 40px;
+    background-color: #FDEAC8;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(230,174,117,.5);
+    position: relative;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 0 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+.col-content{
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+.btn-close{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+    background-color: #C95939;
+    border: none;
+    cursor: pointer;
+}
+.box-nomer{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C95939;
+    font-family: sans-serif;
+    color: white;
+    font-size: .9rem;
+}
+.username-leadeboard{
+    font-family: sans-serif;
+        color: #C95939;
+        font-size: .9rem;
+        font-weight: 500;
+}
+.col-score-leadeboard{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    align-items: center;
+    gap: 8px;
+}
+.text-score{
+    color: #C95939;
+    font-size: .9rem;
+    font-family: sans-serif;
+}
+.tidak-ada-data{
+    color: #C95939;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 160px;
+}
